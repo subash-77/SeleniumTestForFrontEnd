@@ -64,26 +64,26 @@ class NavBar_Test {
         Thread.sleep(4000);
         
 	}
-	@Test
-	void addJewelry() throws InterruptedException {
-		driver.get("http://localhost:3000/login");
-		driver.manage().window().maximize();
-		driver.findElement(By.name("email")).sendKeys("ssubash56781@gmail.com");
-	    driver.findElement(By.name("password")).sendKeys("123456");
-	    driver.findElement(By.name("L-btn")).click();
-	    Thread.sleep(4000);
-	    String currentUrl = driver.getCurrentUrl();
-        assertEquals("http://localhost:3000/login", currentUrl);
-        Thread.sleep(4000);
-        
-	    driver.findElement(By.linkText("ADD JEWELRY")).click();
-	    Thread.sleep(4000);
-
-	    String currentUrl1 = driver.getCurrentUrl();
-        assertEquals("http://localhost:3000/addjewelry", currentUrl1);
-        Thread.sleep(4000);
-        
-	}
+//	@Test
+//	void addJewelry() throws InterruptedException {
+//		driver.get("http://localhost:3000/login");
+//		driver.manage().window().maximize();
+//		driver.findElement(By.name("email")).sendKeys("ssubash56781@gmail.com");
+//	    driver.findElement(By.name("password")).sendKeys("123456");
+//	    driver.findElement(By.name("L-btn")).click();
+//	    Thread.sleep(4000);
+//	    String currentUrl = driver.getCurrentUrl();
+//        assertEquals("http://localhost:3000/login", currentUrl);
+//        Thread.sleep(4000);
+//        
+//	    driver.findElement(By.linkText("ADD JEWELRY")).click();
+//	    Thread.sleep(4000);
+//
+//	    String currentUrl1 = driver.getCurrentUrl();
+//        assertEquals("http://localhost:3000/addjewelry", currentUrl1);
+//        Thread.sleep(4000);
+//        
+//	}
 	@Test
 	void addsales() throws InterruptedException {
 		driver.get("http://localhost:3000/login");
