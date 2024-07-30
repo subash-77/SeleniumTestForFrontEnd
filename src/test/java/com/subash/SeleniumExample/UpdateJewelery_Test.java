@@ -26,6 +26,13 @@ class UpdateJewelery_Test {
 
 	@Test
 	void updateJewelry() throws InterruptedException {
+		driver.get("http://localhost:3000");
+		driver.findElement(By.linkText("Login")).click();
+	    driver.findElement(By.name("email")).sendKeys("ssubash56781@gmail.com");
+	    driver.findElement(By.name("password")).sendKeys("123456");
+	    driver.findElement(By.name("L-btn")).click();
+	    Thread.sleep(4000);
+	    driver.findElement(By.linkText("VIEW JEWELRY")).click();
 		driver.get("http://localhost:3000/editjewelry/6");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("name")).sendKeys("Gold Ring");

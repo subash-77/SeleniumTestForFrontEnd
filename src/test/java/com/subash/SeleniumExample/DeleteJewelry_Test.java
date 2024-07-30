@@ -27,8 +27,13 @@ class DeleteJewelry_Test {
 
 	@Test
 	void deleteJewelry() throws InterruptedException {
-		driver.get("http://localhost:3000/viewjewelry");
+		driver.get("http://localhost:3000");
 		driver.manage().window().maximize();
+		driver.findElement(By.linkText("Login")).click();
+	    driver.findElement(By.name("email")).sendKeys("ssubash56781@gmail.com");
+	    driver.findElement(By.name("password")).sendKeys("123456");
+	    driver.findElement(By.name("L-btn")).click();
+	    Thread.sleep(4000);
 	    driver.findElement(By.linkText("VIEW JEWELRY")).click();
 	    Thread.sleep(5000);
 	    driver.findElement(By.cssSelector(".text-center:nth-child(1) .ms-1")).click();
